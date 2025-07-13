@@ -401,22 +401,22 @@ graph TB
 ```mermaid
 graph LR
     subgraph "Detection Metrics"
-        A[Precision<br/>TP/(TP+FP)]
-        B[Recall<br/>TP/(TP+FN)]
-        C[F1-Score<br/>2*(P*R)/(P+R)]
-        D[Accuracy<br/>(TP+TN)/Total]
+        A["Precision<br/>TP/TP+FP"]
+        B["Recall<br/>TP/TP+FN"]
+        C["F1-Score<br/>2*P*R/P+R"]
+        D["Accuracy<br/>TP+TN/Total"]
     end
     
     subgraph "Battle Outcomes"
-        E[Blue Team Win<br/>F1 > 0.6]
-        F[Red Team Win<br/>F1 < 0.4]
-        G[Draw<br/>0.4 ≤ F1 ≤ 0.6]
+        E["Blue Team Win<br/>F1 greater than 0.6"]
+        F["Red Team Win<br/>F1 less than 0.4"]
+        G["Draw<br/>F1 between 0.4 and 0.6"]
     end
     
     subgraph "Learning Metrics"
-        H[Improvement Rate<br/>Performance change over time]
-        I[Adaptation Count<br/>Number of strategy updates]
-        J[Insight Generation<br/>Learning insights created]
+        H["Improvement Rate<br/>Performance change over time"]
+        I["Adaptation Count<br/>Number of strategy updates"]
+        J["Insight Generation<br/>Learning insights created"]
     end
     
     A --> C
@@ -1216,6 +1216,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **AI Safety and Security Researchers** for adversarial AI insights
 - **Compliance Professionals** for regulatory guidance
 - **Open Source Contributors** for foundational libraries
-
-
-
