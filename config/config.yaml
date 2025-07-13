@@ -1,0 +1,115 @@
+# AML-FT Adversarial Simulation Configuration
+
+# LLM API Configuration
+llm:
+  provider: "openai"  # Options: openai, anthropic, google, azure
+  model: "gpt-4-turbo-preview"
+  api_key: "${OPENAI_API_KEY}"  # Set in environment or .env file
+  temperature: 0.7
+  max_tokens: 4000
+  
+  # Alternative providers
+  anthropic:
+    model: "claude-3-sonnet-20240229"
+    api_key: "${ANTHROPIC_API_KEY}"
+  
+  google:
+    model: "gemini-pro"
+    api_key: "${GOOGLE_API_KEY}"
+
+# Simulation Parameters
+simulation:
+  # Red Team Configuration
+  red_team:
+    target_amount_min: 100000  # Minimum amount to launder ($)
+    target_amount_max: 1000000  # Maximum amount to launder ($)
+    complexity_level: "medium"  # Options: simple, medium, complex
+    techniques_enabled:
+      - "smurfing"
+      - "shell_companies"
+      - "cash_intensive_businesses"
+      - "trade_based_laundering"
+      - "cryptocurrency"
+      - "money_mules"
+    
+  # Blue Team Configuration
+  blue_team:
+    detection_threshold: 0.7  # Confidence threshold for flagging
+    investigation_depth: "thorough"  # Options: basic, standard, thorough
+    enable_osint: true
+    enable_graph_analysis: true
+    enable_ml_models: true
+
+# Data Generation Settings
+data:
+  # Normal Transaction Generation
+  normal_transactions:
+    count: 50000
+    time_period_days: 365
+    customer_count: 5000
+    business_count: 500
+    
+  # Transaction Types and Patterns
+  transaction_types:
+    - type: "retail_purchase"
+      frequency: 0.4
+      amount_range: [10, 500]
+    - type: "salary_payment"
+      frequency: 0.15
+      amount_range: [2000, 8000]
+    - type: "bill_payment"
+      frequency: 0.2
+      amount_range: [50, 1000]
+    - type: "p2p_transfer"
+      frequency: 0.15
+      amount_range: [20, 2000]
+    - type: "business_payment"
+      frequency: 0.1
+      amount_range: [1000, 50000]
+
+# Machine Learning Models
+ml_models:
+  anomaly_detection:
+    algorithm: "isolation_forest"
+    contamination: 0.1
+    
+  graph_analysis:
+    community_detection: "louvain"
+    centrality_measures: ["betweenness", "closeness", "pagerank"]
+    
+  classification:
+    algorithm: "xgboost"
+    features:
+      - "transaction_amount"
+      - "time_of_day"
+      - "day_of_week"
+      - "account_age"
+      - "transaction_frequency"
+      - "network_centrality"
+
+# Reporting Configuration
+reporting:
+  output_format: "markdown"  # Options: markdown, pdf, html
+  include_visualizations: true
+  include_network_graphs: true
+  compliance_standard: "FinCEN_SAR"  # Financial Crimes Enforcement Network
+
+# Logging and Monitoring
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  file: "logs/aml_simulation.log"
+  max_file_size: "10MB"
+  backup_count: 5
+
+# Performance Settings
+performance:
+  max_concurrent_agents: 4
+  batch_size: 1000
+  cache_enabled: true
+  cache_ttl: 3600  # seconds
+
+# Security Settings
+security:
+  mask_sensitive_data: true
+  audit_trail: true
+  encryption_enabled: false  # For production use 

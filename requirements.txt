@@ -1,0 +1,74 @@
+# Core Dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+networkx>=3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+pyvis>=0.3.2
+
+# LLM and Agent Frameworks
+openai>=1.0.0
+langchain>=0.1.0
+langchain-openai>=0.0.5
+autogen-agentchat>=0.2.0
+anthropic>=0.7.0
+google-generativeai>=0.3.0
+
+# Data Processing and Analysis
+faker>=20.0.0
+python-dateutil>=2.8.0
+pytz>=2023.3
+scipy>=1.11.0
+
+# Graph Analysis and Visualization
+igraph>=0.10.0
+graph-tool>=2.45
+bokeh>=3.2.0
+
+# Web Interface
+streamlit>=1.28.0
+streamlit-agraph>=0.0.45
+streamlit-option-menu>=0.3.6
+reportlab>=4.0.4
+Pillow>=10.0.0
+
+# Configuration and Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+click>=8.1.0
+tqdm>=4.66.0
+loguru>=0.7.0
+
+# Financial Data and APIs
+yfinance>=0.2.0
+alpha-vantage>=2.3.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Machine Learning Extensions
+xgboost>=1.7.0
+lightgbm>=4.0.0
+catboost>=1.2.0
+imbalanced-learn>=0.11.0
+
+# Time Series Analysis
+statsmodels>=0.14.0
+prophet>=1.1.0
+
+# Development and Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0
+isort>=5.12.0
+
+# Documentation
+sphinx>=7.1.0
+sphinx-rtd-theme>=1.3.0
+
+# Jupyter Support (optional)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+ipywidgets>=8.1.0 
