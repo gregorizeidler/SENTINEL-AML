@@ -1217,24 +1217,5 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Compliance Professionals** for regulatory guidance
 - **Open Source Contributors** for foundational libraries
 
----
 
-## 📞 Support & Contact
 
-### Getting Help
-- **Documentation**: Check this README and inline code comments
-- **Issues**: Report bugs and request features via GitHub Issues
-- **Discussions**: Join community discussions in GitHub Discussions
-- **Email**: Contact maintainers at [email@example.com]
-
-### Professional Services
-For enterprise deployments, custom development, or professional training:
-- **Consulting**: Available for custom implementations
-- **Training**: Workshops on adversarial AI and AML systems
-- **Support**: Professional support contracts available
-
----
-
-**Last Updated**: December 2024
-**Version**: 2.0.0
-**Maintainer**: [Your Name/Organization] 
